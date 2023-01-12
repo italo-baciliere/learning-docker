@@ -44,5 +44,27 @@ Para que um container esteja em execução deve ter no mínimo um processo dentr
 docker ps / docker container ls - quais container estão em execução
  
 docker ps -a
+
+# Docker Compose
+
+https://docs.docker.com/compose/
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+
+Install the docker: https://docs.docker.com/desktop/install/linux-install/
+ 
+ # Subindo uma aplicação com YML
+ 
+ Baixar o arquivo docker-compose.yml.
+ 
+ Acesse pelo terminal do arquivo.
+ 
+ Execute:
+ 
+ ```bash
+ docker-compose up -d
+ ```
+ 
+  No navegador, acesse a url localhost:3000/seed e em seguida localhost:3000 e veja que tudo continua funcionando como anteriormente.
  
  
