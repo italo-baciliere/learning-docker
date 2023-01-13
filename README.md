@@ -60,22 +60,22 @@ docker container ls –a
 
 Iniciar um container que esteja parado
 ```bash
-docker start
+docker start <container-id>
 ```
 
 Parar um container que esteja rodando
 ```bash
-docker stop
+docker stop <container-id>
 ```
 
 Pausar um container
 ```bash
-docker pause
+docker pause <container-id>
 ```
 
 Iniciar um container pausado
 ```bash
-docker unpause
+docker unpause <container-id>
 ```
 
 Remover um container específico:
@@ -83,6 +83,19 @@ Remover um container específico:
 docker container rm <container-id> --force
 ```
  
+ 
+Executar o container e mantê-lo em execução sem precisar ficar dando sleep
+```bash
+docker run ubuntu bash
+```
+
+Indo mais além, podemos falar que queremos executá-lo em modo interativo, criando um container novo e já acessando diretamente o seu terminal
+```bash
+docker run -it ubuntu bash
+```
+
+
+
 https://hub.docker.com/r/dockersamples/static-site
 
 docker run -d dockersamples/static-site
