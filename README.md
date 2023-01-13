@@ -64,7 +64,12 @@ Install the docker: https://docs.docker.com/desktop/install/linux-install/
  ```bash
  docker-compose up -d
  ```
+ No navegador, acesse a url localhost:3000/seed e em seguida localhost:3000 e veja que tudo continua funcionando como anteriormente.
  
-  No navegador, acesse a url localhost:3000/seed e em seguida localhost:3000 e veja que tudo continua funcionando como anteriormente.
+ Para encerrar as imagens que estão rodando:
+ 
+ ```bash
+ docker-compose down
+ ```
  
  
