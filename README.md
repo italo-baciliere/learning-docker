@@ -1,5 +1,3 @@
-# learning-docker
-
 # Entendendo o Docker 
 
 ## Porque os containers são mais leves?
@@ -24,7 +22,6 @@ Cada container possui um pedaço do kernel do linux, graças ao namespaces UTS.
 
 Os recursos dos containers são gerenciados através de cgroups.
 
-# Instalando o docker
 
 
 
