@@ -101,25 +101,32 @@ docker run -it ubuntu bash
 ```
 
 
-FALTA FAZER
-https://hub.docker.com/r/dockersamples/static-site
+DOCKERSAMPLES
+
+Organização que disponibiliza diversos tipos de aplicações a fim de exemplificar a utilização do Docker: [dockersamples dock hub](https://hub.docker.com/r/dockersamples/static-site)
 
 ```bash
 docker run -d dockersamples/static-site
 ```
 
-Exibir o mapeamento de portas: 
+Exibir o mapeamento de portas
 ```bash
 docker port
+docker port <contaier-id>
 ```
 
-Conseguimos mapear portas de um container com as flags -p e -P.
+Conseguimos mapear portas de um container com as flags -P e -p
 
-Informando que a porta 8080 de nosso host irá refletir na porta 80 do container:
+Realiza o mapeamento de uma porta interna do container para um porta do nosso host
+```bash
+docker run -d -P dockersamples/static-site
+```
+
+Informando que a porta 8080 de nosso host irá refletir na porta 80 do container
 ```bash
 docker run -d -p 8080:80 dockersamples/static-site
 ```
-Acesse seu navegador localhost:8080 e veja a aplicação sendo carregada dentro de seu container.
+Acesse seu navegador localhost:8080 e veja a aplicação sendo carregada dentro de seu container
 
 
 
