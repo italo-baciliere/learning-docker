@@ -58,6 +58,7 @@ docker ps -a
 docker container ls –a
 ```
 
+
 Iniciar um container que esteja parado
 ```bash
 docker start <container-id>
@@ -82,8 +83,13 @@ Remover um container específico:
  ```bash
 docker container rm <container-id> --force
 ```
- 
- 
+
+
+Interagir com um container de maneira interativa
+```bash
+docker run exec -it <container-id> bash
+```
+
 Executar o container e mantê-lo em execução sem precisar ficar dando sleep
 ```bash
 docker run ubuntu bash
@@ -95,10 +101,12 @@ docker run -it ubuntu bash
 ```
 
 
-
+FALTA FAZER
 https://hub.docker.com/r/dockersamples/static-site
 
+```bash
 docker run -d dockersamples/static-site
+```
 
 Exibir o mapeamento de portas: 
 ```bash
