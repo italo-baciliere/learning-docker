@@ -27,6 +27,8 @@ Os recursos dos containers são gerenciados através de cgroups.
 
 # Conhecendo o Docker Hub
 
+O Docker Hub é um grande repositório de imagens que podemos utilizar.
+
 ```bash
 docker run ubuntu
 ```
@@ -39,11 +41,64 @@ Para que um container esteja em execução deve ter no mínimo um processo dentr
 
 
 
-# Comandos necesários
+# Comandos necessários
 
-docker ps / docker container ls - quais container estão em execução
- 
+Containers que estão em execução
+```bash
+docker ps
+```
+Maneira um pouco mais semântica 
+```bash
+docker container ls
+```
+
+Visualizar todos os containers, inclusive os que já não estão mais em execução
+```bash
 docker ps -a
+docker container ls –a
+```
+
+Iniciar um container que esteja parado
+```bash
+docker start
+```
+
+Parar um container que esteja rodando
+```bash
+docker stop
+```
+
+Pausar um container
+```bash
+docker pause
+```
+
+Iniciar um container pausado
+```bash
+docker unpause
+```
+
+Remover um container específico:
+ ```bash
+docker container rm <container-id> --force
+```
+ 
+https://hub.docker.com/r/dockersamples/static-site
+
+docker run -d dockersamples/static-site
+
+Exibir o mapeamento de portas: 
+```bash
+docker port
+```
+
+Conseguimos mapear portas de um container com as flags -p e -P.
+
+Informando que a porta 8080 de nosso host irá refletir na porta 80 do container:
+```bash
+docker run -d -p 8080:80 dockersamples/static-site
+```
+Acesse seu navegador localhost:8080 e veja a aplicação sendo carregada dentro de seu container.
 
 
 
