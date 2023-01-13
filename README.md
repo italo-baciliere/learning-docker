@@ -32,15 +32,21 @@ docker run ubuntu
 ```
 Ao executar o comando acima, o docker realizar um fluxo de criação de containers:
 
-  Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o container.
+Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o container.
 
 Para que um container esteja em execução deve ter no mínimo um processo dentro dele para que o container fique vivo.
+
+
+
 
 # Comandos necesários
 
 docker ps / docker container ls - quais container estão em execução
  
 docker ps -a
+
+
+
 
 # Docker Compose
 
@@ -49,24 +55,25 @@ https://docs.docker.com/compose/
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
 
 Install the docker: https://docs.docker.com/desktop/install/linux-install/
+
+
+
+
+# Subindo uma aplicação com YML
  
- # Subindo uma aplicação com YML
+Baixar o arquivo docker-compose.yml.
  
- Baixar o arquivo docker-compose.yml.
+Acesse pelo terminal do arquivo.
  
- Acesse pelo terminal do arquivo.
+Execute:
  
- Execute:
+```bash
+docker-compose up -d
+```
+No navegador, acesse a url localhost:3000/seed e em seguida localhost:3000 e veja que tudo continua funcionando como anteriormente.
  
- ```bash
- docker-compose up -d
- ```
- No navegador, acesse a url localhost:3000/seed e em seguida localhost:3000 e veja que tudo continua funcionando como anteriormente.
+Para encerrar as imagens que estão rodando:
  
- Para encerrar as imagens que estão rodando:
- 
- ```bash
- docker-compose down
- ```
- 
- 
+```bash
+docker-compose down
+```
